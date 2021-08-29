@@ -24,7 +24,9 @@ const ProductPage = () => {
                     <Div bgImg={product.images[0].src} bgSize="cover" bgPos="center center" h="40rem"/>
                 </Col>
                 <Col>
-                
+                    <Text>{product.title}</Text>
+                    <Text>${product.variants[0].price}</Text>
+                    <Button onClick={() => addItemToCheckout(product.variants[0].id, 1)}>Add To Cart</Button>
                 </Col>
             </Row>
         </Container>
