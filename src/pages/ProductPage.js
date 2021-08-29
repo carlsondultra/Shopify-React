@@ -1,6 +1,7 @@
 import React, { useEffect, useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import { ShopContext } from '../context/shopContext'
+import { Text, Div, Button, Row, Col, Container } from 'atomize'
 
 const ProductPage = () => {
 
@@ -14,13 +15,19 @@ const ProductPage = () => {
         }
     }, [ fetchProductWithId, id ])
 
-    if(!product) return <div>Loading Product</div>
+    if(!product.title) return <div>Loading Product</div>
 
     return (
-        <div>
-            Product Page
-            {id}
-        </div>
+        <Container>
+            <Row>
+                <Col>
+                    <Div bgImg={product.images[0].src} bgSize="cover" bgPos="center center" h="40rem"/>
+                </Col>
+                <Col>
+                
+                </Col>
+            </Row>
+        </Container>
     )
 }
 
