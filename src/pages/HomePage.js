@@ -19,7 +19,7 @@ const HomePage = () => {
         <Container>
             <Row>
                 {products.map(product => (
-                    <Col key={product.id}>
+                    <Col key={product.id} size="3">
                         <Link to={`/product/${product.id}`}>
                             <Div p="2rem">
                                 <Div 
