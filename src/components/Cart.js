@@ -8,7 +8,15 @@ const Cart = () => {
 
     return (
         <SideDrawer isOpen={isCartOpen} onClose={closeCart}>
-            test
+            <Div d="flex" flexDir="column" m={{ b: "4rem" }}>
+                {checkout.lineItems && checkout.lineItems.map(item => (
+                    <Row key={item.id}>
+                        <Col>
+                            <Div bgImg={item.variant.image.src} bgSize="cover" bgPos="center center" h="5rem" w="4rem"/> 
+                        </Col>
+                    </Row>
+                ))}
+            </Div>
         </SideDrawer>
     )
 }
