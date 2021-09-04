@@ -14,7 +14,7 @@ const HomePage = () => {
         };
     }, [fetchAllProducts])
 
-    if(!products) return <div>Loading</div>
+    if(!products) return <div>Loading Products</div>
     return (
         <Container>
             <Row>

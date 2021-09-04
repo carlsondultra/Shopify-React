@@ -15,7 +15,7 @@ const ProductPage = () => {
         }
     }, [ fetchProductWithId, id ])
 
-    if(!product.title) return <div>Loading Product</div>
+    if(!product.title) return <div>Loading Products</div>
 
     return (
         <Container>
