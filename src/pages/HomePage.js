@@ -27,9 +27,13 @@ const HomePage = () => {
                                     bgImg={product.images[0].src}
                                     bgSize="cover"
                                     bgPos="center center"
+                                    shadow="3"
+                                    hoverShadow="4"
+                                    transition="0.3s"
+                                    m={{ b: "1.5rem" }}
                                 />
-                                <Text>{product.title}</Text>
-                                <Text>{product.variants[0].price}</Text>
+                                <Text tag ="h1" textWeight="300" textSize="subheader" textDecor="none" textColor="black500">{product.title}</Text>
+                                <Text tag="h2" textWeight="300" textSize="body" textDecor="none" textColor="gray500">{product.variants[0].price}</Text>
                             </Div>
                         </Link>
                     </Col>
