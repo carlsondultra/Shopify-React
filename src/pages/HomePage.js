@@ -20,7 +20,7 @@ const HomePage = () => {
             <Row>
                 {products.map(product => (
                     <Col key={product.id} size="3">
-                        <Link to={`/product/${product.id}`}>
+                        <Link to={`/product/${product.id}`} style={{ textDecoration: 'none' }}>
                             <Div p="2rem">
                                 <Div 
                                     h="20rem"
@@ -33,7 +33,7 @@ const HomePage = () => {
                                     m={{ b: "1.5rem" }}
                                 />
                                 <Text tag ="h1" textWeight="300" textSize="subheader" textDecor="none" textColor="black500">{product.title}</Text>
-                                <Text tag="h2" textWeight="300" textSize="body" textDecor="none" textColor="gray500">{product.variants[0].price}</Text>
+                                <Text tag="h2" textWeight="300" textSize="body" textDecor="none" textColor="gray500">${product.variants[0].price}</Text>
                             </Div>
                         </Link>
                     </Col>
